@@ -140,7 +140,7 @@ class DualClient(Bot):
             await self._bot.start()
         LOGGER.info("Connected to TG.")
 
-        await asyncio.to_thread(self._import)
+        await asyncio.to_thread(self._import())
         LOGGER.info("Plugins Imported.")
 
         await self.set_mode(force_bot=self.is_bot)
